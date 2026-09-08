@@ -1,6 +1,11 @@
 package dev.trly.java.example.primitive.wrappers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public final class BadgePreviewApp {
+    private static final Logger LOGGER = LoggerFactory.getLogger(BadgePreviewApp.class);
+
     private BadgePreviewApp() {
     }
 
@@ -19,7 +24,7 @@ public final class BadgePreviewApp {
         );
         final String accessArea = priorityAccess.booleanValue() ? "Priority lounge" : "Main hall";
 
-        System.out.printf("Badge: %s%n", badgeCode);
-        System.out.printf("Access: %s%n", accessArea);
+        LOGGER.info("Badge: {}", badgeCode);
+        LOGGER.info("Access: {}", accessArea);
     }
 }
