@@ -11,11 +11,11 @@ public final class BadgePreviewApp {
 
     public static void main(String[] args) {
         final Character[] initials = {
-            new Character('N'),
-            new Character('K')
+            Character.valueOf('N'),
+            Character.valueOf('K')
         };
-        final Character hall = new Character('B');
-        final Boolean priorityAccess = new Boolean(true);
+        final Character hall = Character.valueOf('B');
+        final Boolean priorityAccess = Boolean.valueOf(true);
 
         final String badgeCode = "%c%c-%c12".formatted(
             initials[0].charValue(),
